@@ -2,13 +2,17 @@
 <html>
   <head>
     <title>Moja strona</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+
       h1 {color:blue;
           text-align: center;
         }
+
       h6 {color:red;
             text-align: center;
           }
+
       div {background-color: orange;
             width: 500px;
             height: 200px;
@@ -19,6 +23,13 @@
             font-weight: bold;
             border: 5px dashed blue;
           }
+
+      #gorny {font-size: 30px;}
+
+      #dolny {font-size: 8px;}
+
+      .name {color: green;}
+
       table {border: 2px solid blue;
             border-collapse: collapse;
             width: 50%;
@@ -29,11 +40,44 @@
               text-align: center;
             }
       th {background-color: lightblue;}
+
+      button {background-color: blue;}
+
+      button:hover {background-color: lightblue}
+
+      button:active {background-color: red}
+
+      @media (min-width: 700px) {
+        h2::before {
+          content: "Pełne powitanie czyli: CZESC, JAK SIE MASZ, zwęższ stronę!";
+        }
+        body {background-color: lightblue;}
+      }
+
+      @media (max-width: 699px) {
+        h2::before {
+          content: "Skrócone powitanie: CZESC!";
+        }
+        body {background-color: red;}
+      }
+
+
+
     </style>
   </head>
   <body>
     <h1>największy</h1>
+    <h2></h2>
     <h6>najmnijeszy</h6>
+
+
+
+
+
+    <ul>
+      <li><a href="#sekcja1">Sekcja 1</a></li>
+      <li><a href="#sekcja2">Sekcja 2</a></li>
+    </ul>
 
       Nieułożnona lista (Unordered List)
       <ul>
@@ -47,13 +91,26 @@
         <li>dwa prim</li>
       </ol>
 
-      <div>
+<h4 id="sekcja1">Sekcja pierwsza</h4>
+
+      <div id="gorny">
+      <span class="name">
         To jest odrębny kawałek - division - div. atrybut margin w stylu odsuwa cały kawałek od innych rzeczy na stronie o zdefiniowaną liczbę px.
         Atrybut padding odsuwa tekst w środku od ramki.
+      </span>
       </div>
+
+      <div id="dolny">
+      <span class="name">
+        To jest odrębny kawałek - division - div
+      </span>
+      </div>
+
       <img src="maska drogi + punkty.jpg" height="300" width="400">
 
       <img src="FQ.jpg" width="10%">
+
+<h3 id="sekcja2">Sekcja druga</h3>
 
 tablela: tr - table row , th - table header, td - table data
 
@@ -75,5 +132,22 @@ tablela: tr - table row , th - table header, td - table data
       </form>
 
     Czesc, to ja. Na prawde. No budu wtedu idu
+
+    <br>
+    <br>
+    <p>
+    <input name="name" type="text" placeholder="Nazwa">
+    <input name="password" type="password" placeholder="Haslo">
+    <br>
+    <input name="color" type="radio" value="red">Czerwony
+    <input name="color" type="radio" value="red">Zielony
+
+    <input name="country" list="countries" placeholder="kraj">
+      <datalist id="countries">
+        <option value="Polska">
+        <option value="Niemcy">
+        <option value="Rumunia">
+        <option value="Czechosłowacja">
+
   </body>
 </html>
